@@ -1,6 +1,4 @@
 
-from ast import Interactive
-from ctypes import Union
 import discord
 from discord import Intents, app_commands, Embed
 import json
