@@ -6,7 +6,6 @@ from discord import Intents, app_commands, Embed
 import json
 import os
 
-# Load saved reactions from a JSON file
 try:
     with open("reactions.json", "r") as file:
         reactions = json.load(file)
@@ -157,7 +156,7 @@ async def custom_embed(interaction: discord.Interaction,
     except FileNotFoundError:
         embed_data = {}
 
-    # Update embed data based on provided arguments
+    
     if title:
         embed_data["title"] = title
     if author:
@@ -188,7 +187,7 @@ async def custom_embed(interaction: discord.Interaction,
                 await interaction.response.send_message(f"Invalid color name: {color}")
                 return
 
-    # Create embed object from data
+
     embed = Embed()
     for key, value in embed_data.items():
         if key == "image":
@@ -224,15 +223,6 @@ async def custom_embed(interaction: discord.Interaction,
     with open(embed_file, "w") as f:
         json.dump(embed_data, f)
 
-    # Optional welcome message setting
-    # ... (implement logic to link the command to welcome messages based on your chosen approach)
-
-    # Optional leave message setting
-    # ... (implement logic to link the command to leave messages based on your chosen approach)
-
-    # Optional boost message setting
-    # ... (implement logic to link the command to boost messages based on your chosen approach)
-
     await interaction.response.send_message(f"Embed '{embed_name}' updated successfully!")
 
-client.run("MTIwMDY5NjM4ODA3NDM2MDg2Mw.GkM0oR.RlbX-uCfVXSzP3VTkNoiEiii72ZvkPLNKuP_Uk")  # Replace with your bot token
+client.run("MTIwMDY5NjM4ODA3NDM2MDg2Mw.GkM0oR.RlbX-uCfVXSzP3VTkNoiEiii72ZvkPLNKuP_Uk") 
