@@ -7,3 +7,5 @@ also ignore how my name is literally a girl name, i dont prefer using my name an
 
 # Work in Progress
 Im currently coding a bot called "Elysia" From honkai impact 3rd, its a bot designed for servers!
+
+I uploaded the fil here of elysia its a wip!
