@@ -40,7 +40,6 @@ async def send(interaction: discord.Interaction, channel: discord.TextChannel, m
 
     channel = await interaction.guild.fetch_channel(channel.id)
 
-    # Send messages and confirmation immediately
     for _ in range(count):
         await channel.send(message)
 
@@ -51,7 +50,7 @@ async def auto_reaction(interaction: discord.Interaction, message: str, emoji: s
     reactions[message.lower()] = {"emoji": emoji, "wildcard": wildcard}
     await interaction.response.send_message(f"Auto reaction set for '{message}' with emoji '{emoji}' and wildcard {wildcard}")
 
-    # Save reactions to the JSON file
+    
     with open("reactions.json", "w") as file:
         json.dump(reactions, file)
 
