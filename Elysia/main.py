@@ -222,5 +222,3 @@ async def custom_embed(interaction: discord.Interaction,
         json.dump(embed_data, f)
 
     await interaction.response.send_message(f"Embed '{embed_name}' updated successfully!")
-
-client.run("MTIwMDY5NjM4ODA3NDM2MDg2Mw.GkM0oR.RlbX-uCfVXSzP3VTkNoiEiii72ZvkPLNKuP_Uk") 
